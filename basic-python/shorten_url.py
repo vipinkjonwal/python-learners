@@ -16,4 +16,3 @@ if __name__ == "__main__":
     tk.Button(root, text='Show', command=show_url).grid(row=3, column=1, sticky=tk.W)
     tk.Button(root, text='Quit', command=quit).grid(row=6, column=1, sticky=tk.W)
     root.mainloop()
-
