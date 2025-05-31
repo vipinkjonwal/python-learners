@@ -1,6 +1,5 @@
 from Node import Node
 
-
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -35,6 +34,27 @@ class LinkedList:
             prev = curr
             curr = nextNode
         return prev
+        
+    def mergeTwoLists(self, list1, list2):
+        dummy = Node(0)
+        head = dummy
+        
+        while list1 and list2:
+            if list1.data < list2.data:
+                dummy.next = list1
+                list1 = list1.next
+            else:
+                dummy.next = list2
+                list2 = list2.next
+            dummy = dummy.next
+        
+        if list1:
+            dummy.next = list1
+        if list2:
+            dummy.next = list2
+        return head.next
+        
+             
         
 if __name__ == '__main__':
     obj = LinkedList()
