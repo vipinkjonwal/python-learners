@@ -11,6 +11,8 @@ class TestClass:
 
 
     def displayOutput(self):
+        """_summary_
+        """
         print(self.initArf)
         try:
             print(10/8)
